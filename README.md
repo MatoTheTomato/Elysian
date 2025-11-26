@@ -1,5 +1,5 @@
 # Elysian
-This is an [Obsidian]([https://obsidian.md](https://obsidian.md/)) theme inspired by the UI of [Disco Elysium](https://discoelysium.com/). It has custom embedded backgrounds, fonts and features tape-like markings that follow the content. It supports both dark and light color scheme. 
+This is an [Obsidian](https://obsidian.md/) theme inspired by the UI of [Disco Elysium](https://discoelysium.com/). It has custom embedded backgrounds, fonts and features tape-like markings that follow the content. It supports both dark and light color scheme. 
 
 # Gallery
 
@@ -16,7 +16,7 @@ This is an [Obsidian]([https://obsidian.md](https://obsidian.md/)) theme inspire
 - I've failed to add it in pictures but the light theme has current line dimming, I've decided to not include it in dark theme for a cleaner experience.
 
 # Plugins
-Due to how it is renders the tape markers it may lead to some issues. I've already remade some parts of it since I saw buggy behavior on the [Kanban](https://github.com/mgmeyers/obsidian-kanban) plugin. If that is the case, again do let me know.
+Due to how it is renders the tape markers it may lead to some issues. I've already remade some parts of it since I saw buggy behavior on the [Kanban](https://github.com/mgmeyers/obsidian-kanban) plugin. If any plugin raises issues, again do let me know.
 
 # Credits
 Inspiration and some bits of code were taken from:
@@ -31,4 +31,4 @@ Fonts themselves have been embedded in base64 which should provide seamless usag
 - [IBM Mono Plex](https://github.com/IBM/plex?tab=readme-ov-file)
 
 # Legal disclaimer
-I am not affiliated with ZA/UM. I am not using any material that is their property this is an unofficial fan project.
+I am not affiliated with ZA/UM. I am not using any material that is their property, this is an unofficial fan project.
