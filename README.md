@@ -3,12 +3,12 @@ This is an [Obsidian]([https://obsidian.md](https://obsidian.md/)) theme inspire
 
 # Gallery
 
-![[MainB.png]]
+![Main look dark theme](MainB.png)
 
-![[MainW.png]]
+![Main look light theme](MainW.png)
 
-![[GraphWB.jpg]]
-![[uiWB.jpg]]
+![Combined graph view](GraphWB.jpg)
+![Combined UI view](uiWB.jpg)
 
 # Notes
 - This is my first theme and to be fair any kind of CSS work. I don't guarantee full functionality so please let me know if anything is broken or incompatible.
