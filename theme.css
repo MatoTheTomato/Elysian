@@ -206,7 +206,7 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 
 /* Live Preview specific */
 .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
-    padding: 0;
+    padding: 2px;
 }
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
@@ -215,11 +215,32 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
     padding: var(--file-margins);
 }
 
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > * {
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > *:not(.inline-title) {
     width: 100%;
     max-width: var(--file-line-width);
     margin-left: auto;
     margin-right: auto;
+}
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > .inline-title {
+    width: fit-width;
+    max-width: var(--file-line-width);
+    margin-left: max(0px, calc((100% - var(--file-line-width))/2));
+    margin-right: auto;
+	padding: 2px 12px 1px 12px;
+	text-align: left;
+	letter-spacing: 0.1em;
+	box-sizing: border-box;
+}
+
+.markdown-source-view:not(.is-readable-line-width) .cm-sizer > .inline-title{
+    width: fit-width;
+    max-width: var(--file-line-width);
+	margin-right: auto;
+	padding: 2px 12px 1px 12px;
+	text-align: left;
+	letter-spacing: 0.1em;
+	box-sizing: border-box;
 }
 
 /* Both (floating background) */
