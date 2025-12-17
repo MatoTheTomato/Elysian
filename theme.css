@@ -319,6 +319,6 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
   top: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.2;
+  opacity: 0.15;
   filter: blur(10px);
 }
