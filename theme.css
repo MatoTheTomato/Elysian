@@ -301,8 +301,8 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
     height: 100%;
 }
 
-.markdown-reading-view > .markdown-preview-view,
-.cm-scroller > .cm-sizer {
+.workspace-leaf-content[data-type="markdown"] .markdown-reading-view > .markdown-preview-view,
+.workspace-leaf-content[data-type="markdown"] .cm-scroller > .cm-sizer {
   position: relative;
   overflow: visible; /* Ensure the background isn't clipped */
   padding: var(--file-margins);
