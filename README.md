@@ -2,8 +2,7 @@
 This is a minimalistic [Obsidian](https://obsidian.md/) theme inspired by the UI of [Disco Elysium](https://discoelysium.com/). It has custom embedded backgrounds, fonts and features film-like markings and grainy texture that follows the content. It supports both dark and light color scheme. 
 
 # Gallery
-
-![Main look dark theme](Main_Compare.png)
+![Main look light theme](Main_Dark.png)
 
 ![Main look light theme](Main_Light.png)
 
