@@ -7,7 +7,7 @@ This is a minimalistic [Obsidian](https://obsidian.md/) theme inspired by the UI
 
 ![Main look light theme](Main_Light.png)
 
-![Combined UI view](Main_COmpare.jpg)
+![Combined UI view](Settings_Compare.png)
 
 ![Gif showcasing the scrollable background](showcase.gif)
 
