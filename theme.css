@@ -298,7 +298,12 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 
 .markdown-preview-view {
     overflow: visible;
-    height: 100%;
+    height: unset;
+}
+
+
+.markdown-preview-sizer {
+	padding-bottom: 50em !important;
 }
 
 .workspace-leaf-content[data-type="markdown"] .markdown-reading-view > .markdown-preview-view,
@@ -336,8 +341,8 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 	z-index: -1;
 }
 
-.theme-light .markdown-reading-view > .markdown-preview-view::before,
-.theme-light .view-content > .markdown-source-view .cm-sizer::before{
+.theme-light .workspace-leaf-content[data-type="markdown"] .markdown-preview-view::before,
+.theme-light .workspace-leaf-content[data-type="markdown"] .cm-sizer::before{
 	content: "";
 	position: absolute;
 	top: 0;
