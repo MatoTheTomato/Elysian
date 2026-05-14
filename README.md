@@ -1,4 +1,4 @@
-![Titlepng](tite.png)
+![Titlepng](title.pnggi)
 
 This is a simple [Obsidian](https://obsidian.md/) theme inspired by the UI of [Disco Elysium](https://discoelysium.com/). It has film-like markings, and a grainy texture that gives an impression of a rolling film as you scroll. Inline-titles, colorful text formatting and a classic UI font. Supports both light and dark theme.
 
