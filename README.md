@@ -2,13 +2,15 @@
 This is a minimalistic [Obsidian](https://obsidian.md/) theme inspired by the UI of [Disco Elysium](https://discoelysium.com/). It has custom embedded backgrounds, fonts and features film-like markings and grainy texture that follows the content. It supports both dark and light color scheme. 
 
 # Gallery
+![Gif showcasing the scrollable background](showcase.gif)
+
 ![Main look light theme](Main_Dark.png)
 
 ![Main look light theme](Main_Light.png)
 
 ![Combined UI view](Settings_Compare.png)
 
-![Gif showcasing the scrollable background](showcase.gif)
+
 
 # Notes
 - This is my first theme and to be fair any kind of CSS work. I don't guarantee full functionality so please let me know if anything is broken or incompatible.
