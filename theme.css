@@ -147,11 +147,30 @@ body {
 }
 
 
+
 /*Italic and bold*/
 body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em strong, body strong em {
   color: var(--yellow-color);
 }
 
+/* Change list to use dashes instead of dots*/
+.list-bullet:after {
+    content: '-';
+    border-radius: 0;
+    width: 0;
+}
+
+.list-bullet:before {
+    display: none;
+}
+
+.list-bullet {
+    color: var(--text-normal);
+}
+
+.cm-formatting-list .list-bullet:after {
+    display: none;
+}
 
 
 /* Inline title*/
@@ -241,7 +260,6 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 	padding: 0px 8px;
 	letter-spacing: 0.1em;
 }
-
 
 
 
