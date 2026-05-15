@@ -226,7 +226,6 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 	width: fit-content;
 	background-color: var(--light-theme-white);
 	color: var(--dark-theme-black);
-	padding: 0;
 	margin-left: 24px;
 	font-family: "Sans Condensed Black";
 	padding: 0px 8px;
@@ -237,7 +236,6 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 	width: fit-content;
 	background-color: #495050;
 	color: var(--light-theme-white);
-	padding: 0;
 	margin-left: 24px;
 	font-family: "Roboto Light";
 	padding: 0px 8px;
@@ -294,7 +292,7 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
     height: unset;
 }
 
-.markdown-preview-sizer {
+.workspace-leaf-content[data-type="markdown"] .markdown-reading-view > .markdown-preview-view > .markdown-preview-sizer {
 	padding-bottom: 1em !important;
 }
 
