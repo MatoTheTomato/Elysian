@@ -12,10 +12,11 @@ This is a simple [Obsidian](https://obsidian.md/) theme inspired by the UI of [D
 ![Combined UI view](Settings_Compare.png)
 
 
-
 # Notes
 - This is my first theme and to be fair any kind of CSS work. I don't guarantee full functionality so please let me know if anything is broken or incompatible.
-- It works best with readable line width turned on, but the support for full line width is implemented
+- It works best with readable line width turned on, but the support for full line width is 
+- Mobile works but there are a few quirks I didn't get to yet
+
 
 # Features
 - Fully working light theme
@@ -25,6 +26,11 @@ This is a simple [Obsidian](https://obsidian.md/) theme inspired by the UI of [D
 - Internal and external links are different colors
 - Terminal-looking UI font
 - Light theme has darkening of selected line
+
+# Future plans
+- Add HTML markers for marking colored text (DE skills)
+- SVG background for higher resolution displays
+- Fix and adjust mobile look
 
 # Plugins
 Due to it's feature of the background scrolling with the content, it may be buggy with some plugins. In my limited testing it works alright, but if you find any problems do let me know.
