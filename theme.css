@@ -148,11 +148,11 @@ body {
 	--inline-title-color: var(--light-theme-white);
 }
 
-.theme-dark .cm-comment{
+.theme-dark .cm-comment, .theme-dark .token.comment, .theme-dark .token.prolog, .theme-dark .token.doctype, .theme-dark .token.cdata{
 	--code-comment: #666666
 }
 
-.theme-light .cm-comment{
+.theme-light .cm-comment, .theme-light .token.comment, .theme-light .token.prolog, .theme-light .token.doctype, .theme-light .token.cdata{
 	--code-comment: #ababab
 }
 
