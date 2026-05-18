@@ -302,20 +302,11 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 	background-repeat: inherit;
 }
 
+
 .theme-light .workspace-leaf-content[data-type="markdown"] .markdown-preview-view .markdown-preview-sizer::before{
     filter: invert(1);
 }
 
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-view.is-readable-line-width .markdown-preview-sizer{
-	padding-left: max(calc((100% - var(--file-line-width))/2),32px) !important;
-	padding-right: max(calc((100% - var(--file-line-width))/2),32px) !important;
-	box-sizing: content-box;
-}
-
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer{
-	padding-left: var(--file-margins-x);
-	padding-right: var(--file-margins-x);
-}
 
 .workspace-leaf-content[data-type="markdown"] .markdown-preview-view .markdown-preview-sizer{
 	margin-left: 0px;
@@ -326,10 +317,22 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 	background-image: var(--scrollable-background);
     background-size: 0 0; 
 	background-repeat: repeat-y;
-	position: absolute;
+	position: absolute;	
 }
 
 
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view.is-readable-line-width .markdown-preview-sizer{
+	padding-left: max(calc((100% - var(--file-line-width))/2),32px) !important;
+	padding-right: max(calc((100% - var(--file-line-width))/2),32px) !important;
+	box-sizing: border-box;
+	max-width: unset;
+}
+
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer{
+	padding-left: var(--file-margins-x);
+	padding-right: var(--file-margins-x);
+	box-sizing: border-box;
+}
 
 /*
 .markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer{
