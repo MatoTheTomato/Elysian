@@ -279,50 +279,71 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 }
 
 
-/* Marigins that don't put content over the background */
-.markdown-source-view:not(.is-readable-line-width) .inline-title{
-	margin-right: 4%;
-	margin-left: 5%;
-	margin-top: 0.2em;
-}
 
-.markdown-source-view:not(.is-readable-line-width) .cm-contentContainer{
-	margin-right: 4%;
-	margin-left: 5%;
-}
-
-.markdown-source-view:not(.is-readable-line-width) .metadata-container{
-	margin-right: 4%;
-	margin-left: 5%;
-}
-
-.markdown-preview-view:not(.is-readable-line-width) .inline-title{
-	margin-top: 0.2em;
-}
-
-.markdown-preview-sizer > *{
-	margin-right: 4%;
-	margin-left: 5%;
-}
 
 
 /* Background headache starts here*/
 
 /* Allows for image scrolling even if applied position absolute */
-.markdown-reading-view {
-    overflow-y: auto;
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view{
+	padding: 0px;
 }
 
-.markdown-preview-view {
-    overflow: visible;
-    height: unset;
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view .markdown-preview-sizer::before{
+	content: ""; /* Important */
+    z-index: -1; /* Important */
+    position: inherit;
+    left: 0;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    background-image: inherit;
+    background-size: 100% auto;
+	background-repeat: inherit;
 }
 
-.workspace-leaf-content[data-type="markdown"] .markdown-reading-view > .markdown-preview-view > .markdown-preview-sizer {
-	padding-bottom: 1em !important;
+.theme-light .workspace-leaf-content[data-type="markdown"] .markdown-preview-view .markdown-preview-sizer::before{
+    filter: invert(1);
 }
 
-.workspace-leaf-content[data-type="markdown"] .markdown-reading-view > .markdown-preview-view,
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view.is-readable-line-width .markdown-preview-sizer{
+	padding-left: max(calc((100% - var(--file-line-width))/2),32px) !important;
+	padding-right: max(calc((100% - var(--file-line-width))/2),32px) !important;
+	box-sizing: content-box;
+}
+
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer{
+	padding-left: var(--file-margins-x);
+	padding-right: var(--file-margins-x);
+}
+
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-view .markdown-preview-sizer{
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-top: var(--file-margins-y);
+	width: 100%;
+	height: 100%;
+	background-image: var(--scrollable-background);
+    background-size: 0 0; 
+	background-repeat: repeat-y;
+	position: absolute;
+}
+
+
+
+/*
+.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer{
+
+	padding-left: 32px;
+	padding-right: 32px;
+	background-image: var(--scrollable-background);
+    background-size: 100% auto; 
+	background-repeat: repeat-y;
+	box-sizing: content-box;
+}*/
+
+
+/* Live Preview specific */
 .workspace-leaf-content[data-type="markdown"] .cm-scroller > .cm-sizer {
   position: relative;
   overflow: visible; /* Ensure the background isn't clipped */
@@ -330,7 +351,6 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 }
 
 
-/* Live Preview specific */
 .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
     padding: 2px;
 }
@@ -343,7 +363,6 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 
 
 /* Both (floating/scrollable background) */
-.workspace-leaf-content[data-type="markdown"] .markdown-reading-view > .markdown-preview-view::before,
 .workspace-leaf-content[data-type="markdown"] .view-content > .markdown-source-view .cm-sizer::before{
 	content: "";
 	position: absolute;
@@ -363,9 +382,6 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 	filter: invert(1);
 }
 
-.markdown-reading-view > .markdown-preview-view{
-	padding: 2px;
-}
 
 
 /*Static background*/
