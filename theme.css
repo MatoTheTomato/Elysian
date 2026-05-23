@@ -386,3 +386,17 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
   opacity: 0.17;
   filter: blur(10px);
 }
+
+
+/*------------------- 
+Plugin specific fixes
+-------------------*/
+
+
+/*------------------- 
+Pretty properties
+-------------------*/
+
+.cm-sizer .title-wrapper .inline-title:not([data-level]){
+    padding: 0px; /* A fix for inline icons */
+}
