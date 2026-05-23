@@ -397,6 +397,6 @@ Plugin specific fixes
 Pretty properties
 -------------------*/
 
-.cm-sizer .title-wrapper .inline-title:not([data-level]){
+.is-mobile .cm-sizer .title-wrapper .inline-title:not([data-level]){
     padding: 0px; /* A fix for inline icons */
 }
