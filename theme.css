@@ -42,7 +42,6 @@
 	font-display: swap;
 }
 
-
 /*Sans Condensed Black*/
 @font-face {
 	font-family: "Sans Condensed Black";
@@ -63,7 +62,9 @@
 	font-display: swap;
 }
 
-
+/*----------------------------
+Actual stylisation begins here
+----------------------------*/
 body {
 	/*Typography*/
 	--font-text-theme: "Libre Baskerville";
@@ -114,7 +115,14 @@ body {
 
 	--toggle-radius: 1px;
 	--toggle-thumb-radius: 1px;
+
+	/* Background fixes */
+	--left-size: max(1.2vw, 1em);
+	--right-size: max(1.2vw, 1em);
+	--left-padding: max(4vw, 2.5em);
+	--right-padding: max(4vw, 2em);
 }
+
 
 .theme-dark{
 	--background-primary: var(--dark-theme-black);
@@ -151,6 +159,29 @@ body {
 	--inline-title-color: var(--light-theme-white);
 }
 
+
+/*---------------------------------------------------
+ Some touch ups for mobile, mostly background related
+---------------------------------------------------*/
+body.is-mobile{
+	--left-size: max(2vw, 0.7em);
+	--right-size: max(2vw, 0.7em);	
+	--left-padding: max(6vw, 1.5em);
+	--right-padding: max(4vw, 1.5em);
+}
+
+.is-mobile .metadata-content{
+	background-color: rgb(from var(--background-primary-alt) r g b / 0.5);
+	max-width: 100%;
+	transform: none;
+	border-radius: 10px;
+}
+
+.is-mobile  .mobile-navbar{
+	--navbar-radius: 10px;
+}
+
+
 /* Bring back comments to be a faint color */
 .theme-dark .cm-comment, .theme-dark .token.comment, .theme-dark .token.prolog, .theme-dark .token.doctype, .theme-dark .token.cdata{
 	--code-comment: #666666
@@ -161,11 +192,11 @@ body {
 }
 
 
-
 /* Italic and bold */
 body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em strong, body strong em {
 	color: var(--yellow-color);
 }
+
 
 /* Change list to use dashes instead of dots */
 .list-bullet:after {
@@ -187,7 +218,9 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 }
 
 
-/* Inline title*/
+/*----------
+Inline title
+----------*/
 .theme-dark .inline-title{
 	background-color: var(--light-theme-white);
 	text-transform: uppercase;
@@ -200,6 +233,7 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 	font-weight: 100;
 	letter-spacing: 0.05em;
 }
+
 
 /* The upcoming section is responsible for the size of the background on inline titles and thier correct position */
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer > *:not(.inline-titile) {
@@ -274,23 +308,16 @@ body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em s
 }
 
 
-
-
-
 /*Darken active line in white theme*/
 .theme-light .cm-active.cm-line{
 	background-color: var(--nav-item-background-active);
 }
 
-
-
-
-
 /*-----------------------------
 Background headache starts here
 -----------------------------*/
 
-/* Reading view*/
+/* Reading view */
 .workspace-leaf-content[data-type="markdown"] .markdown-reading-view > .markdown-preview-view{
 	padding-left: 0px;
 	padding-right: 0px;
@@ -310,14 +337,10 @@ Background headache starts here
 		top left 1vh,
 		top left,
 		top right;
-	background-size: 2vh auto, 100% auto, 2vh auto; 
+	background-size: var(--left-size) auto, 100% auto, var(--right-size) auto; 
 	background-repeat: repeat-y;
 	min-height:95vh;
 }
-
-
-
-
 
 .workspace-leaf-content[data-type="markdown"] .markdown-reading-view > .markdown-preview-view .markdown-preview-sizer{
 	margin-left: 0px;
@@ -327,42 +350,29 @@ Background headache starts here
 	height: auto;
 	background-image: var(--scrollable-background);
 	background-size: 0 0; 
-	background-repeat: repeat-y;
+background-repeat: repeat-y;
 	position: absolute;	
 }
 
-
 .workspace-leaf-content[data-type="markdown"] .markdown-reading-view > .markdown-preview-view.is-readable-line-width .markdown-preview-sizer{
-	padding-left: max(calc((100% - var(--file-line-width))/2),4vh) !important;
-	padding-right: max(calc((100% - var(--file-line-width))/2),4vh) !important;
+	padding-left: max(calc((100% - var(--file-line-width))/2), var(--left-padding)) ;
+	padding-right: max(calc((100% - var(--file-line-width))/2), var(--right-padding)) ;
 	box-sizing: border-box;
 	max-width: unset;
 }
 
 .workspace-leaf-content[data-type="markdown"] .markdown-reading-view > .markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer{
-	padding-left: 6vh;
-	padding-right: 4vh;
+	padding-left: var(--left-padding);
+	padding-right: var(--right-padding);
 	box-sizing: border-box;
 }
-
-/*
-.markdown-preview-view:not(.is-readable-line-width) .markdown-preview-sizer{
-
-	padding-left: 4vh;
-	padding-right: 4vh;
-	background-image: var(--scrollable-background);
-	background-size: 100% auto; 
-	background-repeat: repeat-y;
-	box-sizing: content-box;
-}*/
-
 
 /* Live Preview/Editing view */
 .workspace-leaf-content[data-type="markdown"] .markdown-source-view.mod-cm6.is-readable-line-width .cm-scroller > .cm-sizer {
 	position: relative;
 	overflow: visible; /* Ensure the background isn't clipped */
-	padding-left: max(calc((100% - var(--file-line-width))/2),4vh) !important;
-	padding-right: max(calc((100% - var(--file-line-width))/2),4vh) !important;
+	padding-left: max(calc((100% - var(--file-line-width))/2), var(--left-padding)) ;
+	padding-right: max(calc((100% - var(--file-line-width))/2), var(--right-padding)) ;
 	padding-top: var(--file-margins-y); 
 	margin-inline: 0;
 	max-width: unset;
@@ -378,8 +388,8 @@ Background headache starts here
 .workspace-leaf-content[data-type="markdown"]  .markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-sizer{
 	position: relative;
 	overflow: visible; /* Ensure the background isn't clipped */
-	padding-left: 6vh;
-	padding-right: 4vh;
+	padding-left: var(--left-padding);
+	padding-right: var(--right-padding);
 	padding-top: var(--file-margins-y); 
 	box-sizing: border-box;
 }
@@ -395,7 +405,7 @@ Background headache starts here
 		top left 1vh,
 		top left,
 		top right;
-	background-size: 2vh auto, 100% auto, 2vh auto; 
+	background-size: var(--left-size) auto, 100% auto, var(--right-size) auto; 
 	background-repeat: repeat-y;
 	z-index: -1;
 }
@@ -426,3 +436,4 @@ Background headache starts here
 	opacity: 0.17;
 	filter: blur(10px);
 }
+
