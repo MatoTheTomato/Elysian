@@ -65,12 +65,18 @@ body {
 
 	
 	/*Colors*/
-	--blue-color: #5CC1D7;
-	--purple-color: #7556CF;
-	--red-color: #CB476A;
-	--yellow-color: #E3B734;
-	--green-color: #81B567;
-	--orange-color: #E34521;
+	--color-red: #CB476A;
+	--color-orange: #E34521;
+	--color-yellow: #E3B734;
+	--color-green: #81B567;
+	--color-blue: #5CC1D7;
+	--color-purple: #7556CF;
+	--color-red-rgb: #CB476A;
+	--color-orange-rgb: #E34521;
+	--color-yellow-rgb: #E3B734;
+	--color-green-rgb: #81B567;
+	--color-blue: #5CC1D7;
+	--color-purple: #7556CF;
 	--dark-theme-black: #0B0B0B;
 	--light-theme-white: #F5F5F5;
 	--light-theme-black: #495050;
@@ -82,19 +88,19 @@ body {
 
 
 	/*Links*/
-	--link-color: var(--orange-color);
+	--link-color: var(--color-orange);
 	--link-decoration: none;
 	--link-decoration-hover: none;
-	--link-unresolved-color: var(--orange-color);
-	--link-external-color: var(--green-color);
+	--link-unresolved-color: var(--color-orange);
+	--link-external-color: var(--color-green);
 	--link-external-color-hover: #98c684; 
 
 	/* Misc */
-	--checkbox-color: var(--blue-color);
-	--checkbox-hover-color: var(--red-color);
+	--checkbox-color: var(--color-blue);
+	--checkbox-hover-color: var(--color-red);
 	--checkbox-border: 1px;
-	--checkbox-color: var(--green-color);
-	--checkbox-border-color-hover: var(--orange-color);
+	--checkbox-color: var(--color-green);
+	--checkbox-border-color-hover: var(--color-orange);
 	--checkbox-radius: 1px;
 
 	
@@ -126,7 +132,7 @@ body {
 	--code-background: #202020; 
 	
 	--link-color-hover: white;
-	--bold-color: var(--blue-color);
+	--bold-color: var(--color-blue);
 	--text-selection: #5CC1D730;
 	--checkbox-border-color: var(--light-theme-white);
 	--collapse-icon-color-collapsed: var(--text-theme-dark);
@@ -140,8 +146,8 @@ body {
 	--text-normal: var(--text-theme-light);
 	--text-faint: var(--text-theme-light);
 	--code-background: #D0D0D050; 
-	--link-color-hover: var(--purple-color);
-	--bold-color: var(--purple-color);
+	--link-color-hover: var(--color-purple);
+	--bold-color: var(--color-purple);
 	--text-selection: #7556CF30;
 	--checkbox-border-color: var(--light-theme-black);
 	--canvas-dot-pattern: var(--light-theme-black);
@@ -185,7 +191,7 @@ body.is-mobile{
 
 /* Italic and bold */
 body .cm-em .cm-strong, body .cm-strong .cm-em, body .cm-strong.cm-em, body em strong, body strong em {
-	color: var(--yellow-color);
+	color: var(--color-yellow);
 }
 
 
